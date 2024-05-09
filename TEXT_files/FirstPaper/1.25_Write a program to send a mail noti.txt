@@ -1,0 +1,51 @@
+Write a program to send a mail notification to customers regarding the arrival of goods
+on a daily basis. The admin email has a separate domain email address owned by your
+company.Do not forget to add cc candidates in customer’s mail
+
+Here's a Python program that uses the smtplib and email modules to send a mail notification to customers regarding the arrival of goods on a daily basis. The program assumes that you have a list of customer email addresses and a list of cc email addresses, and that you have access to an email account with your company's domain.
+
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Customer and CC email addresses
+customers = ['customer1@example.com', 'customer2@example.com']
+cc_list = ['cc1@example.com', 'cc2@example.com']
+
+# Sender's email credentials
+sender_email = 'admin@example.com'
+sender_password = 'password123'
+
+# Email message details
+subject = 'Goods Arrival Notification'
+message = 'Dear customer,\n\nWe are pleased to inform you that new goods have arrived. Please visit our store to check them out.\n\nThank you,\nThe Admin Team'
+
+# Create message object
+msg = MIMEMultipart()
+msg['From'] = sender_email
+msg['To'] = ', '.join(customers)
+msg['Cc'] = ', '.join(cc_list)
+msg['Subject'] = subject
+msg.attach(MIMEText(message, 'plain'))
+
+# Create SMTP session
+with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+    # Start TLS for security
+    smtp.starttls()
+    # Authenticate with sender's email account
+    smtp.login(sender_email, sender_password)
+    # Send email to customers and cc list
+    smtp.sendmail(sender_email, customers + cc_list, msg.as_string())
+
+print('Mail sent successfully.')
+
+
+In this program, we first define the customer email addresses and cc email addresses as separate lists. We also define the sender's email credentials (email address and password), and the email message details (subject and body).
+
+We then create a MIMEMultipart object and add the sender, recipients, subject, and body to it. We also specify the plain text format for the message.
+
+Next, we create an SMTP session with the SMTP server of the sender's email provider (in this case, Gmail). We start a TLS session for security and authenticate with the sender's email account. Finally, we use the sendmail method to send the email to all the recipients.
+
+Once the email has been sent, the program prints a success message.
+
+Note: You will need to enable "Less secure app access" on your email account if you're using Gmail, as this program uses the SMTP protocol to send emails. Alternatively, you can use OAuth2 authentication for Gmail.

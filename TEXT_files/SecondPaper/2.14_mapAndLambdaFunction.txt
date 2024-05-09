@@ -1,0 +1,19 @@
+14.Given two lists --
+list_1 = [‘Msys’, ‘Tata’, ‘Wells’, ‘Mobinius’]
+list_2 = [‘Technologies’, ‘Power’, ‘Fargo’, ‘Technologies’]
+Write a python code using map and lambda function which will create the list named as my_list
+consisting of the combination of first name and second name from list_1 and list_2 respectively.
+
+
+# Define the first list
+list_1 = ['Msys', 'Tata', 'Wells', 'Mobinius']
+
+# Define the second list
+list_2 = ['Technologies', 'Power', 'Fargo', 'Technologies']
+
+# Apply the map function with a lambda function that concatenates the two input strings x and y with a space in between them
+# The map function applies the lambda function to each element of list_1 and list_2 in parallel
+my_list = list(map(lambda x, y: x + ' ' + y, list_1, list_2))
+
+# Display the result
+print(my_list)

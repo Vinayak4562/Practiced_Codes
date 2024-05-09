@@ -1,0 +1,23 @@
+Given a list of first 10 natural numbers, write a program to find the square of all even numbers
+and cube of all odd numbers and store them in another list.
+
+Sure, here's an example program in Python to find the square of all even numbers and cube of all odd numbers in a list of the first 10 natural numbers and store them in another list:
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   # create the list of the first 10 natural numbers
+result_sqr = []
+result_cube = []                                 # initialize the list to store the squares and cubes
+
+for num in numbers:                         # loop through the numbers list and compute squares and cubes
+    if num % 2 == 0:                        # check if the number is even
+        square = num ** 2                   # compute the square
+        result_sqr.append(square)           # append the square to the result list
+    else:                                   # the number is odd
+        cube = num ** 3                     # compute the cube
+        result_cube.append(cube)                 # append the cube to the result list
+
+print("The Square root of Even Num result list is:", result_sqr)        # print the Square root of Even Num result list
+print("The cube root of Odd Num result list is:", result_cube)          # print cube root of Odd Num result list is
+
+
+In this program, we create a list of the first 10 natural numbers and initialize an empty list result to store the squares of even numbers and cubes of odd numbers. We then loop through the numbers list and check whether each number is even or odd. If the number is even, we compute its square and append it to the result list. If the number is odd, we compute its cube and append it to the result list. Finally, we print the result list.

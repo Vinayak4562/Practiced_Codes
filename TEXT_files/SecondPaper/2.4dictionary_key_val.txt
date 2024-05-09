@@ -1,0 +1,20 @@
+In the dictionary {‘India’:’New Delhi’, ‘USA’:’Washington D.C.’, ‘Nepal’:’Kathmandu’} list out
+all the keys in a list named as ‘list_keys’ and list out all the values in a list named as ‘list_values’.
+Also find out the value of key ‘Australia’ in the list and as it is not existing in the list print ‘NA’ as
+its value.
+Sure, here's an example program in Python to list out all the keys and values in a dictionary, and find the value of a key that does not exist in the dictionary:
+
+dictionary = {'India': 'New Delhi', 'USA': 'Washington D.C.', 'Nepal': 'Kathmandu'}  # Given dictionary
+
+list_keys = list(dictionary.keys())             # to get the keys in separate lists
+list_values = list(dictionary.values())         # to get the values in separate lists
+
+print("The keys are:", list_keys)               # to print the keys lists
+print("The values are:", list_values)           # to print the values lists
+
+key = input("Enter the Value: ")                # to take user value input for search. 
+value = dictionary.get(key, 'NA')               # try to get the value of a key that does not exist.
+
+print("The value of", key, "is", value)         # to print the value
+
+In this program, we create a dictionary d containing three key-value pairs. We then use the keys() and values() methods of the dictionary to get the keys and values in separate lists, respectively. We print these lists using the print() function. Finally, we try to get the value of a key that does not exist in the dictionary using the get() method. Since the key "Australia" does not exist in the dictionary, the get() method returns the default value "NA". We then print the value of the key using the print() function.

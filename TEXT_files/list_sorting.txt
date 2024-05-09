@@ -1,0 +1,12 @@
+# Define the names list
+names_list = ['Prabhu', 'Rahul', 'Arunesh', 'Sonali', 'Rakshit']
+
+# Define a lambda function to extract the last character of a string
+last_char = lambda x: x[-1]
+
+# Sort the names list using the last character of each word
+sorted_names = sorted(names_list, key=last_char)
+
+# Print the sorted list
+print(sorted_names)
+

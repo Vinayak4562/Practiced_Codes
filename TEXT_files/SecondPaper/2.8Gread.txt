@@ -1,0 +1,32 @@
+Take the input marks from user using input() function and find out the grade of the students. Note
+the grading will be in this manner – (100 – 91) – A1, (90-81) – A2, (80-71) – B1, (70-61) – B2, (60-
+51) – C1 (50-40) – C2 and less than 40 students will ‘Fail’. Also make sure user should input the
+marks in the range 0<=marks<=100, if user will input some other marks in should print invalid
+marks.
+
+Here's a Python code to take input marks from the user and calculate the grade based on the given criteria:
+marks = int(input("Enter your marks: "))                                    #Taking User input
+
+if marks < 0 or marks > 100:                                                # checking wether user has sent valid input or not
+    print("Invalid marks entered. Please enter marks between 0 and 100.")   # if its greater than 100 it will print the message
+else:                                                                       # otherwise it will check for Grades
+    if marks >= 91:                                                         # range in between (100–91) printing grade – A1
+        grade = "A1"
+    elif marks >= 81:                                                       # range in between (90-81) printing grade – A2
+        grade = "A2"
+    elif marks >= 71:                                                       # range in between (80-71) printing grade – B1
+        grade = "B1"
+    elif marks >= 61:                                                       # range in between (70-61)printing grade – B2
+        grade = "B2"
+    elif marks >= 51:                                                       # range in between (60-51) printing grade – C1
+        grade = "C1"
+    elif marks >= 40:                                                       # range in between (50-40) printing grade – C2
+        grade = "C2"
+    else:
+        grade = "Fail"                                                      # less than 40 it will print "Fail"
+        
+    print("Your grade is:", grade)
+
+In this code, we first take the input marks from the user using the input() function and convert it to an integer using int(). We then check if the marks are in the valid range of 0 to 100. If the marks are outside this range, we print an error message.
+
+If the marks are valid, we use a series of if-elif statements to check which grade the marks fall into, based on the given criteria. Finally, we print the grade for the input marks.

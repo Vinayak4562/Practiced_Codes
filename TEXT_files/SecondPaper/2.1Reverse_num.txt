@@ -1,0 +1,15 @@
+Write a program to reverse a number without using any inbuit function.
+Sure, here's an example program in Python to reverse a number without using any built-in functions:
+
+num = int(input("Enter a number: "))                    # takeing user input
+
+reverse_num = 0                                         # initialize reverse_num variable
+
+while num > 0:
+    digit = num % 10                                     # get the rightmost digit
+    reverse_num = (reverse_num * 10) + digit             # append the digit to reverse_num
+    num //= 10                                           # remove the rightmost digit from num
+
+print("The reverse of the number is:", reverse_num)      # print the result
+
+In this program, we take a number as user input and initialize a variable reverse_num to store the reversed number. Then we use a while loop to extract the rightmost digit from the input number and append it to the reverse_num variable. We keep doing this until all the digits of the input number are extracted. Finally, we print the reversed number.

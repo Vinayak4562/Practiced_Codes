@@ -1,0 +1,16 @@
+25. Given an Integer n, count the total number of times 1 is appearing in all non-negative integers less than or equal to n.
+Ex – n = 13, output should be 6 method – 1 is coming 6 times starting from number 0 till 13 in ‘1’, ‘10’, ‘11’, ‘12’, ‘13’. Also note 1 is coming 2 times in 11. That is why 6 is the output
+
+def digit_count(n):
+    count = 0                       # Count variable is used to store the digit of count
+    for i in range(n+1):            # this for loop will run till n+1 to include last number
+        count += str(i).count('1')  #str(i) converts the integer i to its string representation and 
+                                    # count('1') counts the number of occurrences of the digit '1' in the string finaly increment the count.
+    
+    return count                    # Return the count 
+
+n = digit_count(int(input("Enter the number: ")))                       # to take input from user
+print(f"Number of digit 1 is occurred {n} times in given range.")       # print the number of occurrence count.
+
+I/p:Enter the number:13
+O/P:Number of digit 1 is occurred 6 times in given range.

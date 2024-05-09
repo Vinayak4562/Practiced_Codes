@@ -1,0 +1,7 @@
+Hi this is vinayak.
+In this example, the lambda function lambda x: x[1] extracts the second element (index 1) from each tuple for sorting.
+
+While lambda functions are useful for simple tasks, 
+they are limited in their capabilities compared to regular named functions 
+defined with def. Lambda functions are best suited for concise operations 
+and not for complex or lengthy functions.

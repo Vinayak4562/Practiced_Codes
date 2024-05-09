@@ -1,0 +1,29 @@
+28. Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.
+If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater
+than or equal to k characters, then reverse the first k characters and leave the other as original.
+Input: s = "abcdefg", k = 2
+Output: "bacdfeg"
+Input: s = "abcd", k = 2
+Output: "bacd"
+
+
+def reverse_every_2k(s, k): 
+    lst = list(s)       # Convert the string to a list of characters (since strings are immutable)    
+    n = len(lst)
+       
+    for i in range(0, n, 2*k):               # Iterate over each 2k chunk of the list
+        j = min(i + k, n) - 1                # Reverse the first k characters in the chunk (or all of them if there are fewer than k)
+        for m in range(i, i + (j - i + 1) // 2):
+            lst[m], lst[j - (m - i)] = lst[j - (m - i)], lst[m]
+
+    return ''.join(lst)                     # Convert the list back to a string and return it
+
+print(reverse_every_2k("abcdefg", 2))       # bacdfeg
+print(reverse_every_2k("abcd", 2))          # bacd
+print(reverse_every_2k("abcdefg", 3))       # cbadefg
+print(reverse_every_2k("abcdefghij", 3))    # cbaedfihgj
+
+
+
+
+

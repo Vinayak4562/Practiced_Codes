@@ -1,0 +1,372 @@
+1. What is Encapsulation and write a program to explain the same
+
+
+2. What is method overriding and write a program to explain the same
+
+
+3. What is Abstraction and write a program to explain the same
+
+
+4. What is __init__() and __new__(), difference between them
+
+
+5. What is interface in oops
+
+
+6. What is classmethod & staticmethod and the difference between them
+
+
+7. What is shallow copy and deep copy, write a program for the same
+
+
+8. How do you open a file and write to a file, write a program for the same
+
+
+9. Write a program to print non-repeatitive characters from a string
+
+
+10. Write a program to print the index of first occurance of n value in a list (with minimal time complexity and without using for loop)
+
+
+# l = [1,2,2,5,6,6,6,6,7,7,9]
+
+
+# n = 6
+
+
+
+
+
+
+11. Write a program to get the below output
+
+
+# home = '/home/test'
+
+
+# dir = 'a/b/c/../d/././e/f'
+
+
+# output = '/home/test/a/b/d/e/f'
+
+
+
+
+
+
+12. What are getter and setter methods in oops
+
+
+13. When to use **kwargs and when to pass a dict object in a function
+
+
+14. What is difference btw abstract method and normal method
+
+
+15. How to create a VM in vCenter
+
+
+16. What is the difference between POST and PUT
+
+
+17. What is the difference between PUT and PATCH
+
+
+18. What is GET method and how do you pass parameters in GET method
+
+
+19. What does status code 422 and 401 means
+
+
+20. Explain the scenarios for errors such as Unauthorized access, Not found, Bad request, Not Acceptable, Unprocessable entity, internal server error
+
+
+21. Difference btw P0 and P1 in JIRA fileds
+
+
+22. What is method overloadinng and wrtie a program to explain the same
+
+
+23. Which Package is used for REST API testing in python
+
+
+24. What methods does requests package have
+
+
+25. What is decorator, write a program for the same
+
+
+26. What is Lambda function
+
+
+27. Difference btw MAP and FILTER methods in Lambda
+
+
+28. Tell about Binary search tree
+
+
+29. How do you troubleshoot/Debug a test failure in new Builds
+
+
+30. What is __call__() in python
+1. What is inheritance, explain types of inheritance?
+
+
+2. Write a program to check and print the intersection between 2 dictionaries
+
+
+3. What happens in the below code, explain each line:
+
+
+Class Class1:
+
+
+    def __init__(self):
+
+
+        self.var = 1
+
+
+    def Calm():
+
+
+        print "Hello"
+
+
+obj=Class1()
+
+
+obj.Calm()
+
+
+
+
+
+
+4. How to find a file in a Linux environment?
+
+
+5. What is a file system?
+
+
+6. Questions on REST APIs
+
+
+7. What is Constructor?
+
+
+8. What is a self parameter?
+
+
+9. What is the 500 status code?
+
+
+10. how do you debug a 500 internal server error before raising a bug
+Questions asked in interview 
+
+
+1.what is encapsulation ?and  write a program and explain that program 
+
+
+2.what is class and object?
+
+
+3.what is abstraction ?write a program for that and explain it?
+
+
+4.what is getter and setter?
+
+
+5.what is difference e between list and tupple?
+
+
+6.program on dictionary
+
+
+7.program on string(1.reversing a string without any inbuilt functions and slicing.   2.print the unrepeated letters in a string)
+
+
+8.what is difference between put and post and put and patch in http menthods?
+
+
+9.what is decorater?
+
+
+10.what is 404 and 422 menas in http status codes?
+
+
+11.what is lambda function?
+
+
+Interview is mainly on python code how we are writing it uniquely
+These are the questions that are asked in today's interview
+
+
+1.write code to find nth largest no in list?
+
+
+2.write code for method overloading and overriding?
+
+
+3.Whats is method overloading and overriding?
+
+
+4.what is absolute xpath and relative xpath?
+
+
+5.differece between / and //?
+
+
+6.find xpath for given image?
+
+
+7.API status code meaning?
+
+
+8.APi methods?
+
+
+9.Anotation in TestNG?
+
+
+10.Keywords in TestNG?
+
+
+11.What is hard assert and soft assert and write syntax?
+
+
+12.Advantages of selenium?
+
+
+13.Why you are using TestNG?
+
+
+14.How to handdle multiple windows in selenium?
+
+
+15.How to handle mouse action in selenim?
+These are the questions that are asked in today's interview
+1. What is encapsulation?
+
+
+2. what is single level and multi level Inheritance?
+
+
+3. What is abstraction?
+
+
+4, What is constructor?
+
+
+5. Can we define a class without constructor?
+
+
+6. What is self parameter?
+
+
+and programs related to all of those
+
+
+7. Program to print next alternate number like to print 1st number 3rd number 5th number etc
+
+
+8. what is the difference between Post and put?
+
+
+9. what are the payloads we provide in get call and put call?
+
+
+10. difference between get and put?
+
+
+11. If a vm creation is failing with error "Unauthorised aceess", What are the logs to check?
+
+
+12. What are logbay logs and how do we enable them?
+
+
+13. If a VM got created in the backed, but not reflecting in UI, whats the issue?
+
+
+14. How do we call a function in a class?
+
+
+15. What is vmotion and xvmotion?
+
+
+16. What is cold migration and hot migration?
+
+
+17. Do you have knowledge in working on any cloud platforms like AWS or Azure?
+
+
+18. Which service has the logs of authorisation and authentication issue?
+
+
+19. What does a request response 423 means?
+
+
+20. What are the field in a JIRA?
+
+
+They are mainly focusing on python and asking to write and explain the programs
+Take a string with repeated characters and print an output as count of each character.
+
+
+Take a list and print even numbers list out of that using list comprehensive.
+
+
+What is OOPs, explain class,object, inheritance.
+
+
+write a code with single level inheritance.
+
+
+write a code to explain try and except.
+
+
+Tell the complex scenario for selenium from your projects undertaken.
+1: Demonstrate list comprehension with some example
+
+
+2:Write some code with respect to inheritance
+
+
+3:a="121" where n=1
+
+
+Count each continuous  digit in the str and   give the output as
+
+
+11211
+
+
+If n=2 then the output of first string becomes input and again count the continuous digit the output is 122112
+Encapsulation and it's example
+
+
+Data abstraction 
+
+
+Getter and setter
+
+
+Put patch
+
+
+File read ,write
+
+
+Relative and absolute XPath
+
+
+Find unique character in string without inbuilt  function
+
+
+Find index of element without inbuilt function
+
+
+Complexity
+
+
+Static and class method

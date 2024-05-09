@@ -1,0 +1,14 @@
+Given a tuple (“Msys”, “Technologies”, “2007”), add “Python” at the end of this tuple and the
+output should also be in the form of tuple. Make a note that tuples are immutable in nature so you
+need to find some idea to make modification and print the updated tuple.
+Yes, you are correct that tuples are immutable in nature, so we cannot modify them directly. However, we can create a new tuple that contains the elements of the original tuple as well as the new element "Python". Here's an example program in Python to add "Python" at the end of a given tuple:
+
+given_tuple = ("Msys", "Technologies", "2007")   # Given tuple
+
+new_tuple = given_tuple + ("Python",)            # create a new tuple by concatenating the original tuple with a tuple containing "Python"
+
+
+print("The updated tuple is:", new_tuple)           # to print the new tuple
+print(type(new_tuple))                              # to print the type of new tuple
+
+In this program, we create the original tuple original_tuple containing three elements: "Msys", "Technologies", and "2007". We then create a new tuple new_tuple by concatenating the original_tuple with a tuple containing a single element "Python". Note that we need to add a comma after "Python" to create a tuple with a single element, otherwise it will be interpreted as a string. Finally, we print the new_tuple containing all the elements of the original_tuple plus "Python" at the end.

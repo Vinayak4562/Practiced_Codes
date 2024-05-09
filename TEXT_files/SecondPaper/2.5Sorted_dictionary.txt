@@ -1,0 +1,16 @@
+Given a dictionary {‘Msys Technologies’:’Sanjay Sehgal’, ‘Infosys’:’Salil Parekh’,
+‘TCS’:’Rajesh Gopinathan’, ‘Wipro’:’Thierry Delaporte’} make a list of all the values associated
+with keys in alphabetically sorted order.
+Sure, here's an example program in Python to make a list of all the values associated with keys in alphabetically sorted order:
+
+
+dictionary = {'Msys Technologies': 'Sanjay Sehgal', 'Infosys': 'Salil Parekh', 'TCS': 'Rajesh Gopinathan', 'Wipro': 'Thierry Delaporte'}# Given dictionary
+
+
+values_list = list(dictionary.values())                 # to get the values from dictionary n stored in values list
+sorted_values = sorted(values_list)                     # to sort the values in alphabetical order.
+
+print("The sorted list of values is:", sorted_values)   # print the sorted list of values
+
+
+In this program, we create the dictionary d containing four key-value pairs. We then use the values() method of the dictionary to get the values in a list, and sort this list alphabetically using the sorted() function. We store the sorted list of values in a variable list_values, and print it using the print() function. This produces a list of all the values associated with keys in alphabetically sorted order.

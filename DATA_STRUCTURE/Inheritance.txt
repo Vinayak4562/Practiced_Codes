@@ -1,0 +1,100 @@
+
+abstraction:-
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+my_dog = Dog()
+my_cat = Cat()
+
+print(my_dog.speak())  # Woof!
+print(my_cat.speak())  # Meow!
+
+
+Encapsulation:-
+class BankAccount:
+    def __init__(self):
+        self.balance = 0
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
+            print("Insufficient balance")
+
+    def get_balance(self):
+        return self.balance
+
+my_account = BankAccount()
+my_account.deposit(100)
+my_account.withdraw(50)
+print("Balance:", my_account.get_balance())  # Balance: 50
+
+
+Inheritance:-
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+my_dog = Dog("Fido")
+my_cat = Cat("Whiskers")
+
+print(my_dog.name, "says:", my_dog.speak())  # Fido says: Woof!
+print(my_cat.name, "says:", my_cat.speak())  # Whiskers says: Meow!
+
+
+Methodoverloading:-
+class Calculator:
+    def add(self, a, b, c=0):
+        if c:
+            return a + b + c
+        else:
+            return a + b
+
+my_calc = Calculator()
+
+print(my_calc.add(1, 2))      # 3
+print(my_calc.add(1, 2, 3))   # 6
+
+
+Methodoverriding:-
+class Animal:
+    def speak(self):
+        return "Generic animal sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+my_dog = Dog()
+
+print(my_dog.speak())  # Woof!
+apps-fileview.texmex_20230316.01_p2
+20.txt
+Displaying 20.txt.

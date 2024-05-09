@@ -1,0 +1,43 @@
+Here's a Python program that uses decorators to print traffic signal messages in a specific order:
+
+python
+Copy code
+def traffic_signal_decorator(func):
+    def wrapper():
+        print("RED : STOP")
+        func()
+        print("YELLOW : SLOW DOWN")
+        func()
+        print("GREEN : GO")
+    return wrapper
+
+@traffic_signal_decorator
+def traffic_signal():
+    pass
+
+traffic_signal()
+This program defines a decorator called traffic_signal_decorator, which takes a function as input and 
+returns a new function that prints traffic signal messages before and after calling the original function.
+
+The decorator defines a new function called wrapper, which prints the "RED : STOP" message, calls the 
+original function using func(), prints the "YELLOW : SLOW DOWN" message, calls the original function again,
+and finally prints the "GREEN : GO" message.
+
+The traffic_signal function is decorated with traffic_signal_decorator, which modifies its behavior 
+to print the traffic signal messages in the expected order.
+
+When the traffic_signal function is called, the decorated version of the function is executed, 
+which prints the traffic signal messages before and after calling the original function. 
+The output of the program should be:
+
+RED : STOP
+YELLOW : SLOW DOWN
+RED : STOP
+GREEN : GO
+YELLOW : SLOW DOWN
+GREEN : GO
+
+Note: The pass keyword is used in the traffic_signal function to define an empty function body. 
+This is necessary because the decorator replaces the original function with a new function that 
+includes additional behavior. If the original function had code inside it, that code would not be 
+executed when the decorated function is called.

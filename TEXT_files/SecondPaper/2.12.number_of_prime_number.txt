@@ -1,0 +1,26 @@
+Write a method number_of_prime_numbers() which takes two input arguments num1 and num2 and should return the total number of prime numbers in the range. The numbers num1 and num2 are inclusive of the range. Also add all the numbers in an empty list and return the sum of the list. So finally your function will return two things, first will be the count of prime numbers and the other will be the sum of all the prime numbers in the given range.
+
+def number_of_prime_numbers(num1, num2):
+    prime_count = 0                                 # Initialize count to zero
+    prime_sum = 0                                   # Initialize sum to zero
+    primes = []
+    
+    for num in range(num1, num2+1):                 # Iterate over the range of numbers from num1 to num2, inclusive
+        if num > 1:                                 # Bcz 1 is not a prime number so we have to skip 1 using condition num > 1              
+            
+            for i in range(2, int(num/2)+1):        # num/2 will give Float val so we have to convert it in to integer         
+                if num % i == 0:                    # if number is divisible by i then its a not a prime number we will break the loop
+                    break
+            else:
+                primes.append(num)                  # appending the prime number to the primes list
+                prime_count += 1                    # incrementing the prime number count
+                prime_sum += num                    # adding the prime number to the primes_sum
+
+    print("Prime numbers in a given range: ", primes)   # printing all prime numumbers in given range
+    return prime_count, prime_sum                       # returning both values i,e.. prime_count and prime_sum 
+
+
+count, prime_sum = number_of_prime_numbers(10,20)
+
+print("Count of prime numbers:", count)
+print("Sum of prime numbers:", prime_sum)

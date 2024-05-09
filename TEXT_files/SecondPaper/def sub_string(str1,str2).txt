@@ -1,0 +1,35 @@
+def sub_string(str1,str2):
+    for i in str1:
+        if i in str2:
+            return "YES"
+        return "NO"    
+
+str1 = input("Enter the First String:")
+str2 = input("Enter the Second String:")
+print(sub_string(str1,str2)) 
+O\P:
+Enter the First String:vinayak havannavar
+Enter the Second String:vishal havannavar
+YES
+
+Enter the First String:hi
+Enter the Second String:bye
+NO
+
+
+def record_calls(func):
+    def wrapper(*args, **kwargs):
+        wrapper.call_count += 1
+        return func(*args, **kwargs)
+    wrapper.call_count = 0
+    return wrapper
+
+@record_calls
+def my_function():
+    print(r"Decorator \n Called Here...")
+
+
+
+my_function()
+my_function()
+print(my_function.call_count)  # Output: 2

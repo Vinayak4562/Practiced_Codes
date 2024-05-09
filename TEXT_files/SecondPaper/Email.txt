@@ -1,0 +1,43 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Define the email addresses of the admin and customers
+admin_email = 'admin@example.com'
+customer_emails = ['customer1@example.com', 'customer2@example.com', 'customer3@example.com']
+
+# Define the email addresses to be cc'd
+cc_emails = ['cc1@example.com', 'cc2@example.com']
+
+# Define the message to be sent
+subject = 'Goods Arrival Notification'
+message = 'Dear Customer,\n\nWe are pleased to inform you that new goods have arrived. Please visit our store to check them out.\n\nBest regards,\n\nYour Company Name'
+
+# Create the email message
+msg = MIMEMultipart()
+msg['From'] = admin_email
+msg['To'] = ', '.join(customer_emails)
+msg['Cc'] = ', '.join(cc_emails)
+msg['Subject'] = subject
+msg.attach(MIMEText(message, 'plain'))
+
+# Send the email message
+with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.ehlo()
+    smtp.login('admin@example.com', 'your_email_password')
+    smtp.sendmail(admin_email, customer_emails + cc_emails, msg.as_string())
+
+print('Email sent successfully')
+
+
+Sure, here's an example Python program that uses the smtplib library to send email notifications to customers regarding the arrival of goods on a daily basis. The program assumes that you have a list of customer email addresses and a list of email addresses to be cc'd, as well as access to an SMTP email server that allows you to send emails:
+
+In this program, we first define the email addresses of the admin and customers, as well as the email addresses to be cc'd. We then define the message to be sent, which includes a subject and a body.
+
+Next, we create an email message using the MIMEMultipart class, set the sender and recipient addresses, and attach the message body to the email. We also set the Cc header to include the email addresses to be cc'd.
+
+Finally, we use the smtplib library to send the email message. We connect to an SMTP email server, login with the admin email address and password, and use the sendmail method to send the email to the customer and cc email addresses.
+
+Note that you will need to replace smtp.gmail.com with the hostname of your SMTP email server, and admin@example.com with your actual admin email address. You will also need to replace your_email_password with the password for your admin email account.
